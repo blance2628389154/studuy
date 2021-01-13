@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" >
+    <button>显示密码</button>
+    <script>
+    var input=document.querySelector('input');
+    var btn=document.querySelector('button');
+    var flag=1;
+    btn.onclick=function(){
+        if(flag==1){
+            btn.innerHTML='不显示密码';
+            input.type='text';
+            flag=0;
+        }else{
+            btn.innerHTML='显示密码';
+            input.type='password';
+            flag=1;
+        }
+        
+    }
+    </script>
+</body>
+</html>

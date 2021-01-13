@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="time">   2019-10-10 </div>
+    <script>
+        //id先有标签才能获取元素
+        //id是大小写敏感字符
+        var demo=document.getElementById('time');
+        console.log(demo);//返回的是一个element对象
+        console.log(typeof demo);//object
+        console.dir(demo);
+    </script>
+    <ul>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+        <li>li4</li>
+    </ul>
+    <ol id="ol">
+        <li>指定li1</li>
+        <li>li2</li>
+        <li>li3</li>
+        <li>li4</li>
+    </ol>
+    <script>
+    var lis =document.getElementsByTagName('li');//选择所有li
+    console.log(lis);//返回一个伪数组里面吧所有里作为对象存入   只有一个也是返回伪数组  没有li返回空的伪数组
+    console.log(lis[0]);//一个第一个li
+    //遍历里面的对象
+    for (var i =0;i<lis.length;i++){
+        console.log(lis[i]);
+    }
+    //指定父元素获取子元素
+    var ol =document.getElementsByTagName('ol');
+    console.log(ol);    
+    console.log(ol[0].getElementsByTagName('li'));//父元素必须是单个元素  或者给父元素加id
+    var olid=document.getElementById('ol');
+    var olli=olid.getElementsByTagName('li');   
+    console.log(olli[0]);
+    </script>
+    <div class="box">盒子    </div>
+    <div class="box">盒子    </div>
+    <script>
+    //html5(i9)新增元素选取方式
+    //通过类选择
+    var box =document.getElementsByClassName('box');
+    console.log(box);//返回的是个为素组
+    //通过选择器选择元素
+    var box1=document.querySelector('.box');//返回第一个指定选择器的第一个对象    .class   #id 
+    console.log(box1);
+    var boxAll=document.querySelectorAll('.box');
+    console.log(boxAll);//返回指定元素的集合，一伪元素的方式
+ 
+    </script>
+    <script>
+    //获取body 和html元素
+    var body=document.body;
+    console.log(body);
+    console.dir(body);
+    var htmlEle=document.documentElement;
+    console.log(htmlEle);
+    
+    
+    </script>
+</body>
+
+</html>

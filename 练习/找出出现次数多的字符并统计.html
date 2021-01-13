@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var str='abcoefoxyozzopp';
+    var o={};
+    for(var i=0;i<str.length;i++){
+        var word=str.charAt(i);
+        if(o[word]){
+            o[word]++;
+        }else{
+            o[word]=1;
+        }
+    }
+    console.log(o);
+    var max=0;
+    var maxword='';
+    for (var k in o){
+        if( o[k]>max){
+            max=o[k];
+            maxword=k;
+        }
+    }
+    console.log('出现'+maxword+'的次数最多，为'+max+'次');
+    
+    
+    </script>
+</body>
+</html>

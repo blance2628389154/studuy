@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var str= 'abcdeofgofdogadogeo';
+    var weizi=str.indexOf('o');
+   // console.log(weizi);
+   var num=0; 
+    while(weizi !==-1 ){
+        num++;
+        console.log(weizi);
+        weizi=str.indexOf('o',weizi+1);
+    }
+    console.log('o的个数为'+num);
+    </script>
+    <script>
+    function getNum (str,needfind){
+        var weizi=str.indexOf(needfind);
+        var num=0;
+        while(weizi !==-1 ){
+        num++;
+        weizi=str.indexOf(needfind,weizi+1);
+    }
+    return num;
+    }
+    </script>
+</body>
+</html>

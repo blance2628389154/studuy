@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var str= 'andy';
+    var str1='red';
+    var str2='改革春风吹满地';
+    console.log(str.length);//输出为4
+    //基本包装类型
+    var temp = new String('andy');
+    str=temp;
+    temp=null;
+
+    //根据字符返回位子
+    console.log(str.indexOf('d'));//输出为2
+    //根据位置返回字符
+    console.log(str.charAt(3));//返回‘y’
+    console.log(str[3]);//返回'y';html5新增
+    console.log(str.charCodeAt(3));//返回‘y’的ASCII码值
+    console.log(str.concat(str1));//连接多个字符
+    console.log(str2.substr(2,2));//截取部分字符串（‘截取的起始位置‘，’截取的字符个数‘）
+    console.log(str2.replace('春','秋'));//替换字符（‘要替换的第一个字符’,'替换成什么字符')
+    console.log(str2.split(''));//将字符串返回数组，参数为分隔符
+    
+    
+    
+    
+    </script>
+</body>
+</html>

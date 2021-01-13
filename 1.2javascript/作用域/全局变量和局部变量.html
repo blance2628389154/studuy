@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var num =1;//全局变量
+    function fun(aru){//函数的形参是局部变量
+        var num =10;//局部变量
+        num2=20;//函数内直接赋值的变量是全局变量
+        function fun1 (){
+            console.log(num);//由于作用域链，查找的是num=10；
+        }
+
+        }
+        console.log();
+        //全局变量只有浏览器关闭的时候才会销毁，比较迟内存
+        //局部变量程序运行完就会销毁，比较节约内存
+                                           
+    </script>
+</body>
+</html>

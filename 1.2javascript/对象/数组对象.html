@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //数组内置对象的增删方法
+    var arr =[1,1,2,2,3,3];
+    arr.push(4);    //在数组后面新增元素
+ //  arr.push(5,6); // 一个或多个
+    console.log(arr.push(5,6)); //返回的是新数组的个数
+    console.log(arr); 
+    // arr.unshift(0,0); 在数组前面添加新数组
+    console.log(arr.unshift(0,0));//返回的是新素组的length
+    console.log(arr); 
+    // arr.pop();
+    console.log(arr.pop());//无参，删除最后一个元素，返回被删除的元素
+    console.log(arr.shift());//无参， 删除第一个元素 ，返回被删除的元素
+    var arr1 =['red','bule','pink','green','pink'];
+    arr1.reverse();     //翻转数组
+    console.log(arr1);
+    var arr2 =[1,5,7,23,77,3,6];
+    arr2.sort(function(a,b){ //从小到啊排序
+        return a-b; 
+    } );
+    console.log(arr2);
+    console.log(arr1.indexOf('pink',2));//从数组前面查找第一个复合元素的索引号，没有则为-1；
+    console.log(arr1.lastIndexOf('pink'));//从数组后面查找
+    //数组转换为字符串
+    console.log(arr1.toString());//转换为字符串，分隔符为逗号
+    console.log(arr1.join('-'));    //自定义分隔符
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

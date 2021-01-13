@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //date是一个构造函数 调用要用new  
+        var date1=new Date();//返回字符串  'Sun Dec 15 2019 04:21:28 GMT+0800 (中国标准时间)'
+    console.log(date1);
+        var date2=new Date(2019,10,1);//Fri Nov 01 2019 00:00:00 GMT+0800 (中国标准时间)
+        console.log(date2);
+        var date3=new Date('2019-10-1 8:8:8');//Tue Oct 01 2019 08:08:08 GMT+0800 (中国标准时间)
+        console.log(date3);
+        //date的格式化  比如现在的时间date1  想输出的的格式   现在是2019年12月15日星期日五点10分22秒
+        var year=date1.getFullYear();
+        var month=date1.getMonth()+1;
+        var dates=date1.getDate();
+        var days=date1.getDay();
+        var arr=['日','一','二','三','四','五','六'];
+        var hours=date1.getHours();
+        var min=date1.getMinutes();
+        var sec=date1.getSeconds();
+        console.log('现在是'+year+'年'+month+'月'+dates+'日'+'星期'+arr[days]+hours+'时'+min+'分'+sec+'秒');
+    //一个返回当前时间的函数
+        function getTimer(){
+            var time=new Date();
+            var hours=time.getHours();
+            hours=hours<10?'0'+hours:hours;
+            var min=time.getMinutes();
+            min =min<10?'0'+min:min;
+            var sec=time.getSeconds();
+            sec=sec<10?'0'+sec:sec;
+            return hours+':'+min+':'+sec;
+
+        }
+        console.log(getTimer());
+    //获取1970，1，1 00:0000到现在的毫秒数（时间戳）  现在时间是date1
+        console.log(date1.getTime());
+        console.log(date1.valueOf());
+        var timeNum= +new Date();   //+new Date(时间)
+        console.log(timeNum);
+        console.log(Date.now());//Dare.now()   html5
+        
+        
+        
+     
+
+        
+    </script>
+</body>
+</html>

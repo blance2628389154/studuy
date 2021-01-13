@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* body{
+        background:url("../img/初音.jpg");
+    } */
+    div,
+    p {
+        text-align: center;
+        background-color: aquamarine;
+    }
+    </style>
+</head>
+<body background="../img/初音.jpg">
+    <button id="bg1">改变背景1</button>
+    <button id="bg2">改变背景2</button>
+
+    <button id="btn"> 获取当前时间</button>
+    <br>
+    <button id="ss">搜索</button>
+    <input type="text" value="输入内容">
+    <script>
+    var ss=document.getElementById('ss');
+    var input=document.querySelector('input');
+    ss.onclick=function(){
+        input.value='被点击了';
+        //ss.disabled=true
+        this.disabled=true;//this指向函数的调用者
+    }
+    </script>
+    <div id="time">
+        摸个时间按
+    </div>
+    <p>lueluelue</p>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <script>
+    var btn=document.getElementById('btn');
+    var time=document.getElementById('time');
+    btn.onclick=function(){
+        //修改元素的内容
+        time.innerText=getTimer();
+    }
+    function getTimer(){ //获取当前时间的方法
+            var time=new Date();
+            var hours=time.getHours();
+            hours=hours<10?'0'+hours:hours;
+            var min=time.getMinutes();
+            min =min<10?'0'+min:min;
+            var sec=time.getSeconds();
+            sec=sec<10?'0'+sec:sec;
+            return hours+':'+min+':'+sec;
+        }
+    var ppp=document.getElementsByTagName('p');
+    ppp[0].innerText=getTimer();//没有事件触发类型直接修改内容
+    //innertext 非标准的  不识别html标签 去除空格和换行
+    var div1=document.getElementById('div1');
+    div1.innerText='<strong>今天是</strong>e';
+    //innerHTML w3c标准  识别html  保留空格和换行
+    var div2=document.getElementById('div2');
+    div2.innerHTML='<strong>今天是</strong>  e';
+        console.log(div1.innerText);
+        console.log(div2.innerHTML);//都是可读写的方法（元素对象的方法）
+        
+    //改变元素属性
+    var bg1=document.getElementById('bg1');
+    var bg2=document.getElementById('bg2');
+    var body1=document.body;
+    bg1.onclick=function(){
+        body1.background='../img/游泳.jpg';//标签元素对象.属性=修改
+        
+    }
+    bg2.onclick=function(){
+        body1.background='../img/我很好奇.jpg';
+    }
+    </script>
+</body>
+</html>

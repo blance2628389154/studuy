@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //变量声明和函数会提升到主教作用域的最前面，作用域哦
+    console.log(num1);//报错
+    
+    console.log(num);//undefind
+    var num=1;
+    console.log(num);//out:1
+    
+    fn();//可运行
+    function fn(){
+        console.log(11);
+    }
+    fun();// 不可运行
+    var fun= function(){
+        console.log(22);
+    }
+    fun();//可运行
+
+    </script>
+</body>
+</html>

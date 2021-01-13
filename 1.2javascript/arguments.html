@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //arguents的使用，不知道实参的个数时，省略形参,只有函数里面内置了arguments
+    function fu () {
+        console.log(arguments);
+        for (var i =0;i<arguments.length;i++){
+            console.log(arguments[i]);
+            
+        }
+    }
+        fu (1,2,3);//arguents是一个伪数组，有length，有索引，没有数组的方法
+
+
+    </script>
+</body>
+</html>
